@@ -1,0 +1,128 @@
+.cast-page{
+    padding-bottom: 2rem;
+}
+
+// 中段
+.cast-medium-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 300px;
+    margin-bottom: 100px;
+
+    @include mq("sp") {
+   margin-top: 250px;
+   margin-bottom: 50px;
+}
+}
+.cast-medium{
+    display: flex;
+    margin: 0 1.875rem 1.875rem 0;
+    width:calc(50% - 15px) ;
+
+    @include mq("sp") {
+        display: block;
+        margin: auto;
+       width: 90%;
+       margin-bottom: 2rem;
+     }
+
+    &:nth-child(2n){
+        margin-right: 0px;
+
+        @include mq("sp") {
+            margin: auto;
+           width: 90%;
+           margin-bottom: 2rem;
+         }
+    }
+}
+
+// 画像
+.cast-medium-img{
+    margin-right: 1rem;
+width: 40%;
+@include mq("sp") {
+    width: 60%;
+    margin: auto;
+ }
+
+    img{
+        border-radius: 300px;
+    }
+}
+
+// テキスト
+.cast-medium-text-wrap{
+    width: 50%;
+
+    @include mq("sp") {
+        width: 90%;
+        margin: auto;
+     }
+}
+
+// 名前
+.cast-medium-name{
+    @include mq("sp") {
+        width: 90%;
+        text-align: center;
+     }
+    span{
+font-size: $bigText-size;
+}
+}
+
+// 職歴
+.cast-medium-detail{
+    margin: 1rem 0;
+    p{
+    font-size: $s-small-size;
+}
+}
+
+// テキスト
+.cast-medium-text{
+    p{
+    font-size: $small-size;
+    }
+}
+
+
+// 下段
+.cast-small-bg{
+    background-color: $comment-bg;
+}
+
+.cast-small-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4.5rem 0;
+
+    @include mq("sp") {
+       padding: 2rem 0 0 0;
+     }
+}
+
+.cast-small{
+    margin: 0 1.875rem 1.875rem 0;
+    width: calc(33.333333% - 20px);
+
+    @include mq("sp") {
+        margin: auto;
+       width: 90%;
+       margin-bottom: 2rem;
+     }
+
+    &:nth-child(3n) {
+        margin-right: 0px;
+
+        @include mq("sp") {
+            margin: auto;
+            margin-bottom: 2rem;
+         }
+}
+}
+
+.cast-small-name{
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+footer{
+    background-color: $base-font-color;
+    p{
+        color: $base-white-color;
+        font-size: $s-small-size;
+        text-align: center;
+        padding: 2rem 0;
+
+        @include mq("sp") {
+            font-size: .4rem;
+            padding: 1rem 0;
+         }
+    }
+}

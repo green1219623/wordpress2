@@ -1,0 +1,127 @@
+.comment{
+    padding: 2rem 0;
+}
+
+// タイトル
+.h2-wrap-comment {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @include mq("tab") {
+        margin-bottom: 2rem;
+    }
+
+    @include mq("sp") {
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-family: $english-font-family;
+        font-size: 2.6rem;
+        font-weight: 300;
+
+        @include mq("tab") {
+            font-size: 1.8rem;
+        }
+
+        @include mq("sp") {
+            font-size: $bigText-size;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+
+        @include mq("tab") {
+            font-size:$normal-size;
+        }
+
+        @include mq("sp") {
+            font-size: $small-size;
+        }
+    }
+}
+
+// 画像
+.comment-img {
+    background: transparent url(../img/top/comment.png) no-repeat center left/cover;
+
+    @include mq("sp") {
+        display: none;
+    }
+}
+
+// コメント
+.comment-text-wrap {
+    color: $base-white-color;
+    padding: 2rem 0 0 2rem;
+    width: 60%;
+
+    @include mq("sp") {
+       display: none;
+    }
+}
+
+.comment-name {
+    font-size: 1.2rem;
+    span {
+        font-size: 1.6rem;
+    }
+}
+
+.comment-text {
+    font-size: $small-size;
+    margin-top: 1rem;
+}
+
+// ボタン
+.comment-btn {
+    text-align: right;
+    padding: 0 1rem 1rem 0;
+    a {
+        @include button($small-size);
+    }
+}
+
+// スマホ表示
+.comment-card-wrap{
+    display: none;
+    margin: auto;
+    width: 90%;
+    @include mq("sp") {
+        display: block;
+     }
+}
+
+// 画像
+.comment-card-img{
+    vertical-align: bottom;
+}
+
+// テキスト
+.comment-card-text-wrap{
+    background-color: #161616;
+    color: $base-white-color;
+    padding: 2rem;
+}
+
+// 名前
+.comment-card-name{
+    font-size: 0.8rem;
+    span {
+        font-size: 1.2rem;
+    }
+}
+
+// コメント
+.comment-card-text{
+    padding: 1rem 0;
+    font-size: $s-small-size;
+}
+
+// ボタン
+.comment-card-btn{
+    text-align: center;
+    a {
+        @include button($small-size);
+    }
+}

@@ -1,0 +1,81 @@
+
+.introduction-wrap{
+    background: rgba(255, 255, 255, 0.29) no-repeat padding-box;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    position: relative;
+}
+
+// 画像
+.introduction-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @include mq("sp") {
+        display: none;
+      }
+}
+
+// タイトル
+.h2-wrap{
+    text-align: center;
+    color: $title-font-color;
+    margin-bottom: 2.3rem;
+
+    @include mq("tab") {
+        margin-bottom: 2.8rem;
+      }
+
+      @include mq("sp") {
+        margin-bottom: 1.5rem;
+      }
+    h2{
+        font-family: $english-font-family;
+        font-size: 2.6rem;
+        font-weight:300;
+
+        @include mq("tab") {
+            font-size: 1.8rem;
+          }
+
+          @include mq("sp") {
+            font-size: $bigText-size;
+          }
+    }
+    h3{
+        font-size: $title-size;
+        font-weight: lighter;
+
+        @include mq("tab") {
+            font-size: 30px;
+          }
+
+          @include mq("sp") {
+            font-size: $bigText-size;
+          }
+    }
+}
+
+// 説明文
+.introduction-text-wrap{
+    display: flex;
+    justify-content: space-around;
+
+    @include mq("sp") {
+       display: block;
+      }
+}
+
+.introduction-text{
+font-size: $s-small-size;
+width: 45%;
+
+@include mq("sp") {
+    margin: auto;
+    margin-bottom: 1rem;
+    width: 90%;
+   }
+}
+

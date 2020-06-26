@@ -1,0 +1,186 @@
+.page-wrap {
+    width: 100%;
+
+    @include mq("sp") {
+        margin: auto;
+        width: 90%;
+    }
+}
+
+// 画像
+.page-img {
+    img {
+        height: auto;
+        vertical-align: bottom;
+        min-height: 550px;
+        max-width: 100%;
+        object-fit: cover;
+        width: 100%;
+
+        @include mq("tab") {
+            max-height: 450px;
+            min-height: 240px;
+            overflow: hidden;
+        }
+        @include mq("sp") {
+            height: auto;
+            margin: auto;
+            max-height: 300px;
+            min-height: 240px;
+            overflow: hidden;
+        }
+    }
+}
+
+// タイトル
+.page-title {
+    background-color: $pagenation-color;
+    color: $base-white-color;
+    padding: 1rem 2rem;
+
+    p {
+        font-size: $s-small-size;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+}
+
+// 記事中身
+.page-content {
+    background-color: $comment-bg;
+    padding: 2rem;
+    padding-bottom: 5rem;
+
+    h3 {
+        font-size: 1.3rem;
+        padding-bottom: 2rem;
+    }
+
+    h4 {
+        font-size: $medium-size;
+
+        padding-bottom: 2rem;
+    }
+
+    p {
+        padding-bottom: 2rem;
+    }
+}
+
+// ネクストボタン
+.link-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    @include mq("sp") {
+        margin: auto;
+        margin-top: 2rem;
+        width: 70%;
+    }
+}
+
+// 前ページ
+.previous-page {
+    display: flex;
+    width: 45%;
+}
+
+.link-circle-previous {
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: $pagenation-color;
+    text-align: center;
+    line-height: 2rem;
+
+    i {
+        color: $pagenation-text;
+        margin-top: 8px;
+        margin-right: 5px;
+    }
+}
+
+
+// 次ページ
+.next-page {
+    display: flex;
+    text-align: right;
+    width: 45%;
+
+    @include mq("sp") {
+      width: auto;
+    }
+}
+
+.link-circle-next {
+    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: $pagenation-color;
+    text-align: center;
+    line-height: 2rem;
+
+    i {
+        color: $pagenation-text;
+        margin-top: 8px;
+        margin-left: 5px;
+    }
+}
+
+.link-text-wrap {
+    width: 80%;
+
+    @include mq("sp") {
+        display: none;
+    }
+}
+
+.link-date {
+    font-size: $s-small-size;
+}
+
+.link-title {
+    font-size: $small-size;
+}
+
+
+
+
+.post-navigation {
+    margin-top: 3em;
+  }
+  
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+  }
+  
+  .nav-links {
+    padding: .5em 0;
+  }
+  
+  .nav-links:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .nav-previous {
+    float: left;
+    width: 45%;
+  }
+  
+  .nav-next {
+    float: right;
+    width: 45%;
+  }

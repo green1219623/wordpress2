@@ -1,0 +1,182 @@
+.news {
+    margin-bottom: 4rem;
+}
+
+.news-card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// タイトル
+.h2-wrap-news {
+    color: $title-font-color;
+    text-align: center;
+    margin-bottom: 2.3rem;
+
+    @include mq("tab") {
+        margin-bottom: 2.8rem;
+    }
+
+    @include mq("sp") {
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-family: $english-font-family;
+        font-size: 2.6rem;
+        font-weight: 300;
+
+        @include mq("tab") {
+            font-size: 1.8rem;
+        }
+
+        @include mq("sp") {
+            font-size: $bigText-size;
+        }
+    }
+}
+
+.news-title-wrap {
+    position: relative;
+}
+
+// ボタン
+.news-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    a {
+        @include button($small-size);
+    }
+
+    @include mq("sp") {
+        display: none;
+    }
+}
+
+// カード
+.news-card {
+    margin: 0 1.875rem 1.875rem 0;
+    width: calc(33.333333% - 20px);
+
+    &:nth-child(3n) {
+        margin-right: 0px;
+    }
+
+    @include mq("sp") {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 1.875rem;
+
+        &:nth-child(3n) {
+            margin: auto;
+            margin-bottom: 1.875rem;
+        }
+    }
+
+    img {
+        height: 140px;
+        vertical-align: bottom;
+        max-width: 100%;
+        object-fit: cover;
+        width: 250px;
+        @include mq("sp") {
+            height: auto;
+            max-height: 300px;
+            min-height: 240px;
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+}
+
+// カード文字
+.news-card-text-wrap {
+    background-color: $base-white-color;
+    min-height: 120px;
+    padding: 1rem;
+
+    @include mq("sp") {
+        min-height: 120px;
+    }
+}
+.news-date {
+    color: $date-color;
+    font-size: $s-small-size;
+}
+
+.news-title {
+    font-size: $normal-size;
+}
+
+// 小さいカード
+.news-small-wrap {
+    &:first-child {
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+}
+
+.news-small {
+    display: flex;
+    width: 47%;
+    margin-right: 45px;
+
+    @include mq("tab") {
+        margin-right: 40px;
+    }
+    
+
+    &:nth-child(5n) {
+        margin-right: 0px;
+    }
+
+    @include mq("sp") {
+        display: block;
+        margin: auto;
+        margin-bottom: 1.875rem;
+        width: 90%;
+
+        &:nth-child(5n) {
+            margin: auto;
+            margin-bottom: 1.875rem;
+        }
+    }
+    img {
+        height: 88px;
+        vertical-align: bottom;
+        object-fit: cover;
+        width: 156px;
+
+        @include mq("sp") {
+            height: auto;
+            max-height: 300px;
+            min-height: 230px;
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+}
+
+.small-card-text-wrap {
+    background-color: $base-white-color;
+    height: 88px;
+    padding: 0.5rem;
+
+    @include mq("sp") {
+        min-height: 120px;
+    }
+}
+
+// スマホのみ現れるボタン
+.news-btn-sp {
+    display: none;
+    @include mq("sp") {
+        display: block;
+text-align: center;
+       
+        a {
+            @include button($small-size);
+        }
+    }
+}

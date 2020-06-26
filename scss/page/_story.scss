@@ -1,0 +1,66 @@
+.story{
+    background:linear-gradient(-45deg, rgba(56, 56, 56, 0.3), rgba(24, 24, 24, 0.3)),transparent url(../img/top/story.png) no-repeat center left/cover;
+    height: 420px;
+}
+
+// タイトル
+.h2-wrap-story{
+    color: $base-white-color;
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include mq("tab") {
+        margin-bottom: 2rem;
+    }
+
+    @include mq("sp") {
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-family: $english-font-family;
+        font-size: 2.6rem;
+        font-weight: 300;
+
+        @include mq("tab") {
+            font-size: 1.8rem;
+        }
+
+        @include mq("sp") {
+            font-size: $bigText-size;
+        }
+    }
+}
+
+// テキスト
+.story-text-wrap{
+    width: 40%;
+    margin-left: auto;
+
+    @include mq("tab") {
+        width: 50%;
+    }
+
+    @include mq("sp") {
+        margin: auto;
+        width: 90%;
+    }
+    p{
+        color: $base-white-color;
+        font-size: $s-small-size;
+    }
+}
+
+// ボタン
+.story-btn{
+   text-align: right;
+   margin-top: 1.2rem;
+
+   @include mq("sp") {
+    text-align: center;
+    margin-top: 1.8rem;
+}
+    a {
+        @include button($small-size);
+    }
+}

@@ -1,0 +1,125 @@
+.schedule{
+    padding: 1rem 0 5rem 0;
+    @include mq("sp") {
+       padding: 0.5rem 0 3rem 0;
+     }
+  }
+  
+
+// タイトル
+.h2-wrap-schedule{
+    text-align: center;
+    margin-bottom: 2.3rem;
+
+    @include mq("tab") {
+        margin-bottom: 2.8rem;
+    }
+
+    @include mq("sp") {
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-family: $english-font-family;
+        font-size: 2.6rem;
+        font-weight: 300;
+
+        @include mq("tab") {
+            font-size: 1.8rem;
+        }
+
+        @include mq("sp") {
+            font-size: $bigText-size;
+        }
+    }
+}
+
+// 囲い
+.schedule-wrap{
+    background: rgba(255, 255, 255, 0.29) no-repeat padding-box;
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+// スケジュール情報
+.schedule-text-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 1.2rem;
+    width: 80%;
+
+    @include mq("sp") {
+        justify-content: start;
+    }
+
+    &:first-of-type{
+        padding-top: 0px;
+    }
+
+    p{
+        font-size: $bigText-size;
+        @include mq("tab") {
+            font-size: $normal-size;
+        }
+
+        @include mq("sp") {
+           padding-right: 1rem;
+        }
+    }
+
+}
+
+.under-line{
+    text-decoration: underline;
+    &:hover{
+        color:$base-red-color;
+    }
+}
+
+// ボタン
+.scedule-btn-wrap{
+    display: flex;
+    justify-content: center;
+
+    @include mq("sp") {
+        display: block;
+        text-align: center;
+     }
+}
+
+.cast-contact-btn{
+    margin-right: 2rem;
+    @include mq("sp") {
+        margin-right:0px ;
+        margin-bottom: 1rem;
+     }
+
+    a{
+    @include button($small-size);
+    background-color:$base-font-color;
+    @include mq("sp") {
+        padding: 0.8rem 1rem;
+     }
+
+    &:hover{
+        background-color:$base-white-color;
+        color: $base-font-color;
+    }
+    }
+}
+
+.cast-book-btn{
+    a{
+    @include button($small-size);
+
+    &:hover{
+        background-color:$base-white-color;
+        color: $base-red-color;
+    }
+
+    @include mq("sp") {
+        padding: 0.8rem 1rem;
+     }
+    }
+}

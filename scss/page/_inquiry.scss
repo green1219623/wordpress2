@@ -1,0 +1,128 @@
+.inquiry-wrap{
+    background: rgba(255, 255, 255, 0.29) no-repeat padding-box;
+    padding-top: 2rem;
+}
+
+.inquiry-inner{
+    margin: auto;
+    width: 90%;
+}
+
+form {
+    margin: 0 0 2rem 0;
+    padding: 60px 90px;
+  
+    @include mq("tab") {
+      padding: 40px 70px;
+    }
+    @include mq("sp") {
+      padding: 20px 20px;
+      margin: 0px;
+
+    }
+  }
+  
+  // フォームごと
+  .form-flex {
+    display: flex;
+    margin-bottom: 50px;
+  
+    @include mq("sp") {
+      display: block;
+    }
+
+      // テキストボタン
+input{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color:$comment-bg;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  outline: none;
+
+  @include mq("sp") {
+    width: 100%;
+  }
+}
+  }
+  
+  .form-text {
+    cursor: pointer;
+  }
+  
+  .form-text-wrapper {
+      margin-top: 2rem;
+    width: 150px;
+  
+    @include mq("tab") {
+      width: 150px;
+    }
+  
+    @include mq("sp") {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+
+  
+  .text-test:focus {
+    border: none;
+    outline: none;
+  }
+
+  
+  //   送信ボタン
+
+  .contact__submit{
+      text-align: center;
+
+input {
+    -webkit-appearance: none;
+    background-image: none;
+    background-color:$base-red-color;
+    border: none;
+    color: $base-white-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 30px;
+    padding: 0.6em 3em;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: $base-font-color;
+      opacity: 1;
+      cursor: pointer;
+  }
+  
+    @include mq("sp") {
+      display: block;
+      font-weight: bold;
+      margin: auto;
+      padding: 0.5em 1em;
+      margin-top: 20px;
+    }
+  }
+}
+  
+  .form-button:hover,
+  .form-button:focus {
+background-color: $base-font-color;
+  }
+  
+  .form-button::-moz-foucus-inner {
+    border: none;
+    padding: 0;
+  }
+  

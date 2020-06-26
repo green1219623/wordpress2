@@ -1,0 +1,83 @@
+// トップコメント
+.page-comment-img {
+    background: transparent url(../img/top/comment.png) no-repeat center left/cover;
+
+    @include mq("sp") {
+       display: none;
+      }
+}
+
+// コメント
+.page-comment-text-wrap-top {
+    color: $base-white-color;
+    padding: 2rem 0 0 2rem;
+    width: 60%;
+
+    @include mq("sp") {
+       display: none;
+      }
+}
+
+.comment-name {
+    font-size: 1.2rem;
+    span {
+        font-size: 1.6rem;
+    }
+}
+
+.comment-text {
+    font-size: $small-size;
+    margin-top: 1rem;
+}
+
+
+.page-comment-text-wrap{
+    margin-top: 50px ;
+}
+
+.page-comment-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-comment-card{
+    margin: 0 50px 50px 0;
+    width: calc(33.3333333% - 100px / 3);
+
+    @include mq("sp") {
+        margin: auto;
+        margin-bottom: 1rem;
+        width: 90%;
+      }
+    
+  &:nth-child(3n) {
+    margin-right: 0;
+
+    @include mq("sp") {
+        margin: auto;
+        margin-bottom: 1rem;
+      }
+  }
+  }
+
+//   名前
+.page-comment-name{
+    text-align: center;
+    font-size: $bigText-size;
+}
+
+// 役職
+.page-comment-detail{
+    color: $date-color;
+    font-size: $s-small-size;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+// 本文
+.page-comment-text{
+    @include mq("sp") {
+        font-size: $small-size;
+      }
+}
+  

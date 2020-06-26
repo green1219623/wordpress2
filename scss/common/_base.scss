@@ -1,0 +1,210 @@
+body {
+    background-image: url("../img/back-ground.png");
+    color: $base-font-color;
+    font-family: $base-font-family;
+    line-height: 1.5;
+    height: 100%;
+    width: 100%;
+}
+
+.inner {
+    width: 100%;
+    max-width: 810px;
+    margin: auto;
+
+    @include mq("tab") {
+        max-width: 700px;
+      }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    color: $base-font-color;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@media (min-width: 1088px) {
+    .hidden-pc {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1087px) {
+    .hidden-tab {
+        display: none;
+    }
+}
+
+.title-center {
+    font-family: $english-font-family;
+}
+
+@mixin section-title {
+    font-size: 36px;
+    font-family: $english-font-family;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    h2 {
+        @include mq("tab") {
+            font-size: 36px;
+        }
+        @include mq("sp") {
+            font-size: 30px;
+            margin: 40px 0;
+        }
+    }
+}
+
+.section-title {
+    position: relative;
+    @include section-title;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+.hidden-tab .hidden-pc {
+    display: none;
+}
+
+@mixin button($font-size) {
+    display: inline-block;
+    background-color: $base-red-color;
+    color: $base-white-color;
+    font-size: $font-size;
+    padding: 0.7rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background-color: $base-font-color;
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+
+// パンくず
+.breadcrumb {
+	font-size: $s-small-size;
+    margin: 3rem 0 0.5rem 0;
+    
+    @include mq("sp") {
+        margin-top: 4rem;
+        margin-left: 1rem;
+        margin-bottom: 1.5rem;
+      }
+}
+
+.breadcrumb a {
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+}
+
+.breadcrumb i {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+// 白パんくず
+
+.breadcrumb-story {
+	font-size: $s-small-size;
+    margin: 2rem 0;
+    
+    @include mq("sp") {
+        margin-left: 1rem;
+      }
+}
+.breadcrumb-story a {
+	color: $base-white-color;
+}
+
+.breadcrumb-story i {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+
+// ぺジネーション
+.pagenation {
+	margin-top: 12px;
+    text-align: center;
+}
+
+.pagenation a.next,
+.pagenation a.prev {
+	font-size:$s-small-size ;
+}
+
+.page-numbers {
+	background:transparent;
+	border: 2px solid $pagenation-color;
+	color: $pagenation-color;
+    display: inline-block;
+	font-size:$s-small-size;
+	height: 27px;
+	line-height: 25px;
+	margin-right: 5px;
+	min-width: 27px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.page-numbers:last-child {
+	margin-right: 0;
+}
+
+.page-numbers.current {
+    background:$pagenation-color;
+	border: 2px solid $pagenation-color;
+	color: $pagenation-text;
+	font-weight: 700;
+}
+
+.page-numbers.dots,
+.page-numbers.next,
+.page-numbers.prev {
+	border: 2px solid $pagenation-color;
+    min-width: 27px;
+    height: 27px;
+	line-height: 25px;
+	margin-right: 14px;
+	min-width: 27px;
+	text-align: center;
+	text-decoration: none;
+}
+
+// スマホのみ改行
+.sp {
+    display: none;
+    @include mq("sp") {
+        display: block;
+    }
+}

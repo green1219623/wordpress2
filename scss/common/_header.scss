@@ -1,0 +1,48 @@
+header {
+  color: $base-font-color;
+  font-family: $english-font-family;
+  width: 100%;
+  z-index: 100;
+
+  @include mq("sp") {
+    display: none;
+  }
+}
+
+.header-wrap {
+  ul{
+  display: flex;
+  justify-content: center;
+
+  li {
+    padding:1.5rem 2.5rem 2rem 0;
+    text-align: center;
+    position: relative;
+
+    &:last-child{
+      padding-right: 0px;
+    }
+
+    a {
+      color: $base-brown-color;
+      font-size: $bigText-size;
+
+      ruby {
+        text-align: center; 
+        ruby-align: center;
+        rt {
+          font-size: $s-small-size;
+          font-family: $base-font-family;
+          text-align: inherit;
+        }
+      }
+    }
+  }
+}
+}
+
+.menu-item-description{
+  font-size: $s-small-size;
+
+
+}

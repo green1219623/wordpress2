@@ -1,0 +1,135 @@
+.hero-img {
+  background-image: linear-gradient(135deg, rgba(150, 150, 150, 0.1), rgba(20, 20, 20, 0.3)),
+    url(../img/top/hero.png);
+  background-size: cover;
+  background-position: center center;
+  color:$base-white-color;
+  height: 520px;
+
+  @include mq("sp") {
+    height: 600px;
+  }
+ 
+}
+
+// タイトル
+.hero-title-wrap{
+  text-align: center;
+  padding: 3.75rem 0;
+
+  @include mq("sp") {
+    padding: 2rem;
+  }
+  p{
+    font-family:'Noto Serif JP', serif;
+    font-weight: bold;
+    font-size: 2.3rem;
+    margin-right: 10px;
+
+    @include mq("tab") {
+      font-size: 1.5rem;
+    }
+
+    @include mq("sp") {
+      font-size: 1rem;
+    }
+  }
+  h1{
+    font-family: 'Noto Serif JP', serif;
+    font-size:6.1rem;
+    line-height: 85px;
+
+    @include mq("tab") {
+      font-size: 4rem;
+    }
+
+    @include mq("sp") {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+// 詳細テキスト
+.hero-text-wrap{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 950px;
+  position: relative;
+
+  @include mq("tab") {
+    width: 700px;
+  }
+
+  @include mq("sp") {
+    display: block;
+    width: 90%;
+  }
+}
+
+// 日付
+.hero-date{
+  font-size: 2.1rem;
+  font-family:'Noto Serif JP', serif;
+  font-weight: bold;
+  margin-right: 7.3rem;
+  margin-top: 4.5rem;
+  width: 45%;
+
+  @include mq("tab") {
+    font-size:2rem;
+    margin-right: 3rem;
+  }
+
+  @include mq("sp") {
+    font-size: 1rem;
+    margin-top: 0px;
+    width: 100%;
+  }
+}
+
+// 舞台説明
+.hero-detail{
+  font-size: $small-size;
+  width: 40%;
+
+  @include mq("sp") {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+// ボタン
+.top-btn{
+  position: absolute;
+  right:0rem;
+  bottom: -7rem;
+  @include mq("tab") {
+    bottom: -5.5rem;
+  }
+  @include mq("sp") {
+    bottom: -1rem;
+    position: relative;
+    text-align: center;
+  }
+  a{
+  @include button($small-size)
+} 
+}
+
+.top-btn-top{
+  position: absolute;
+  right:0rem;
+  bottom: -1.2rem;
+
+  @include mq("sp") {
+    bottom: -1rem;
+    position: relative;
+    text-align: center;
+  }
+  a{
+  @include button($small-size)
+}
+}

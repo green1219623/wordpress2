@@ -1,0 +1,119 @@
+.cast{
+    padding: 2rem 0;
+    margin-bottom: 100px;
+}
+
+// タイトル
+.h2-wrap-cast {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @include mq("tab") {
+        margin-bottom: 2rem;
+    }
+
+    @include mq("sp") {
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-family: $english-font-family;
+        font-size: 2.6rem;
+        font-weight: 300;
+
+        @include mq("tab") {
+            font-size: 1.8rem;
+        }
+
+        @include mq("sp") {
+            font-size: $bigText-size;
+        }
+    }
+}
+
+.cast-wrap-wrap{
+    transform: translateY(100px);
+}
+
+.cast-flex{
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(-100px);
+    margin-bottom: calc(1.5em - 100px);
+}
+
+// 背景
+
+.cast-bg{
+    background: $comment-bg;
+    
+    width: 100%;
+    z-index: -1;
+}
+
+.cast-wrap{
+    margin: 0 1.875rem 1.875rem 0;
+    width: calc(33.333333% - 20px);
+
+    @include mq("sp") {
+        margin: auto;
+       width: 90%;
+       margin-bottom: 2rem;
+     }
+
+    &:nth-child(3n) {
+        margin-right: 0px;
+
+        @include mq("sp") {
+            margin: auto;
+            margin-bottom: 2rem;
+         }
+    }
+
+    // 画像
+    img{
+        border-radius: 300px;
+
+        @include mq("sp") {
+            display: block;
+            margin: auto;
+            width: 200px;
+         }
+    }
+
+    // 名前
+    h3{
+        font-size: $medium-size;
+        font-weight: normal;
+        text-align: center;
+        margin: 2rem 0;
+        span{
+            font-size: $s-small-size;
+         }
+
+        @include mq("sp") {
+            margin: 0.8rem;
+         }
+    }
+
+    p{
+        font-size: $s-small-size;
+    }
+}
+
+// ボタン
+.cast-btn{
+    text-align: center;
+    padding-bottom: 4rem;
+    a{
+        border: 5px solid $base-red-color;
+        color:$base-red-color;
+        padding: 0.5rem 2rem;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: $comment-bg;
+            background-color: $base-red-color;
+        }
+    }
+}
+
+
